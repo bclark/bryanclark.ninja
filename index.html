@@ -321,6 +321,10 @@
               <span>ACCESS GITHUB PROTOCOL</span>
             </a>
 
+            <a href="https://www.linkedin.com/in/bclarkeng" target="_blank" rel="noopener noreferrer" onclick="playClick()" class="clip-tag bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/40 hover:border-amber-400 font-bold px-4 py-2 text-xs flex items-center gap-2 transition transform active:scale-95">
+              <span>LINKEDIN PROFILE</span>
+            </a>
+
             <button onclick="scrollToTerminal()" class="clip-tag bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/40 hover:border-amber-400 font-bold px-4 py-2 text-xs flex items-center gap-2 transition transform active:scale-95">
               <span>⚡ INITIALIZE COMMS FREQUENCY</span>
             </button>
@@ -406,10 +410,32 @@
         <div class="bg-slate-900/90 border border-amber-500/40 rounded-lg p-5 clip-hud">
           <div class="flex items-center justify-between border-b border-amber-500/20 pb-3 mb-4">
             <span class="text-xs text-amber-400 font-bold tracking-widest">// ACTIVE DEPLOYMENTS & OPERATIONS</span>
-            <span class="text-[10px] text-slate-400">4 INITIATIVES ACTIVE</span>
+            <span class="text-[10px] text-slate-400">5 INITIATIVES ACTIVE</span>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <!-- Leaf: public comic and manga reader -->
+            <div class="bg-slate-950/70 border border-amber-500/30 hover:border-amber-400 p-4 rounded transition group" style="grid-column: 1 / -1;">
+              <div class="flex items-start justify-between mb-2">
+                <div>
+                  <span class="text-[10px] px-1.5 py-0.5 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold">OPEN SOURCE</span>
+                  <h3 class="text-base font-bold text-slate-100 group-hover:text-emerald-400 transition mt-1">Leaf</h3>
+                </div>
+              </div>
+              <p class="text-xs text-slate-400 mb-3">
+                Offline comic and manga reader with guided panel-by-panel reading, 3D page curl, and SMB streaming. A friendly fork of <a href="https://github.com/batunii/chika" target="_blank" rel="noopener noreferrer" class="text-amber-300 underline">Chika</a>.
+              </p>
+              <div class="flex flex-wrap gap-1.5 text-[10px] text-slate-300 mb-3">
+                <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700">Kotlin Multiplatform</span>
+                <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700">Jetpack Compose</span>
+                <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-700">SMB Streaming</span>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <a href="https://bclark.github.io/leaf-reader/" target="_blank" rel="noopener noreferrer" onclick="playClick()" class="clip-tag bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/40 hover:border-amber-400 font-bold px-4 py-2 text-xs flex items-center gap-2 transition">EXPLORE LEAF</a>
+                <a href="https://github.com/bclark/leaf-reader" target="_blank" rel="noopener noreferrer" onclick="playClick()" class="clip-tag bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/40 hover:border-amber-400 font-bold px-4 py-2 text-xs flex items-center gap-2 transition">SOURCE CODE</a>
+              </div>
+            </div>
             
             <!-- Project 1: RelicRat -->
             <div class="bg-slate-950/70 border border-amber-500/30 hover:border-amber-400 p-4 rounded transition group">
@@ -779,7 +805,7 @@
           res.innerHTML = `
             Available Directives:<br/>
             - <strong class="text-amber-300">about</strong>: Tactical commander background & specs<br/>
-            - <strong class="text-amber-300">projects</strong>: Current active deployments (RelicRat, NASync)<br/>
+            - <strong class="text-amber-300">projects</strong>: Current active deployments (Leaf, RelicRat, NASync)<br/>
             - <strong class="text-amber-300">commits</strong>: Query GitHub telemetry details<br/>
             - <strong class="text-amber-300">contact</strong>: Secure transmission coordinates<br/>
             - <strong class="text-amber-300">clear</strong>: Wipe terminal screen<br/>
@@ -790,13 +816,13 @@
           res.textContent = "Bryan Clark: Software Architect, homelab engineer, and builder. Dedicated to self-reliance, local-first computing, and engineering systems that keep running under heavy g-force.";
           break;
         case 'projects':
-          res.innerHTML = "Deployments: RelicRat (Collectibles & Provenance Archive), Technodrome NAS (32 Container Cluster), Dual Bambu CoreXY 3D Prototyping (Rocksteady & Bebop).";
+          res.innerHTML = "Deployments: Leaf (Offline Comic &amp; Manga Reader), RelicRat (Collectibles & Provenance Archive), Technodrome NAS (32 Container Cluster), Dual Bambu CoreXY 3D Prototyping (Rocksteady & Bebop).";
           break;
         case 'commits':
           res.textContent = contributionSummary;
           break;
         case 'contact':
-          res.innerHTML = 'GitHub: <a href="https://github.com/bclark" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline">github.com/bclark</a> // Email: <a href="mailto:bclark108@gmail.com" class="text-amber-400 underline">bclark108@gmail.com</a>';
+          res.innerHTML = 'GitHub: <a href="https://github.com/bclark" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline">github.com/bclark</a> // LinkedIn: <a href="https://www.linkedin.com/in/bclarkeng" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline">linkedin.com/in/bclarkeng</a> // Email: <a href="mailto:bclark108@gmail.com" class="text-amber-400 underline">bclark108@gmail.com</a>';
           break;
         case 'quote':
           res.innerHTML = '<em class="italic text-amber-200">"If you don\'t make a move, you\'re dead. If you make the wrong move, you\'re dead. So make a move." — James Holden</em>';
